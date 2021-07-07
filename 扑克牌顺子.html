@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function IsContinuous(numbers) {
+      let max = 0, min = 14, flag = 0;
+      if (numbers.length !== 5) return false;
+      for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 13 || numbers[i] < 0) return false;
+        if (numbers[i] === 0) continue;
+        if ((falg >> numbers[i] & 1) === 1) return false;
+        flag = flag | 1 << numbers[i];
+        if (numbers[i] > max) max = numbers[i];
+        if (numbers[i] < min) min = numbers[i];
+      }
+      if (max - min >= 5) return false;
+      return true;
+    }
+  </script>
+</body>
+
+</html>

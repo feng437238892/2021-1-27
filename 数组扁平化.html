@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr = [1,[2,3,[4,5,6],[3344,555]],[22,55]]
+    let newArr = []
+    // function delayering(arr){
+    //   arr.forEach(item=>{
+    //     if(Array.isArray(item)){
+    //       delayering(item)
+    //     }else{
+    //       newArr.push(item)
+    //     }
+    //   })
+    //   return newArr
+    // }
+    let arr1 = (arr+'').split(',')
+    console.log(arr1,"1111")
+    let arr2 = arr1.map(item=>{
+       return Number(item)
+    })
+    console.log(arr2)
+    // console.log(delayering(arr))
+  </script>
+</body>
+</html>
