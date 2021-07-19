@@ -15,15 +15,27 @@
     //声明一个空对象
     var obj = {};
     //遍历数组
-    for(var i=0;i<arr.length;i++){
+    for (var i = 0; i < arr.length; i++) {
       var key = arr[i];
       //判断 如果对象中有这个属性 个数加1 如果没有就添加这个属性
-      if(obj[key]){
+      if (obj[key]) {
         obj[key]++
-      }else{
-        obj[key] =1
+      } else {
+        obj[key] = 1
       }
     }
+    //定义最大的次数 以及 最大字符串的key
+    var Count = 0;
+    var maxString = "";
+    for (var key in obj) {
+      console.log(obj[key],"obj[key]obj[key]obj[key]")
+      console.log(key,"keykey")
+      if (Count < obj[key]) {
+        Count = obj[key]
+        maxString = key
+      }
+    }
+    alert("出现次数最多的字母:" + maxString + "出现了" + Count + "次");
   </script>
 </body>
 
